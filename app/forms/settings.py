@@ -17,6 +17,7 @@ class SettingsForm(FlaskForm):
             ("romm", "Romm"),
             ("komga", "Komga"),
             ("kavita", "Kavita"),
+            ("grimoire", "Grimoire"),
         ],
         validators=[DataRequired()],
     )

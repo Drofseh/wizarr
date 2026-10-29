@@ -156,7 +156,7 @@
                     {{ toggle("allow_downloads_" ~ s.id, "allow_downloads", _("Allow Downloads"), s.allow_downloads) }}
                     {{ toggle("allow_live_tv_" ~ s.id, "allow_live_tv", _("Allow Live TV Access"), s.allow_live_tv) }}
                     {{ toggle("allow_mobile_uploads_" ~ s.id, "allow_mobile_uploads", _("Allow Mobile Uploads"), s.allow_mobile_uploads) }}
-                  {% elif s.server_type in ["audiobookshelf", "komga"] %}
+                  {% elif s.server_type in ["audiobookshelf", "komga", "grimoire"] %}
                     {{ toggle("allow_downloads_" ~ s.id, "allow_downloads", _("Allow Downloads"), s.allow_downloads) }}
                   {% endif %}
                   <!-- Library dropdown-search -->

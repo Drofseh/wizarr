@@ -15,6 +15,7 @@ class WizardStepForm(FlaskForm):
             ("romm", "Romm"),
             ("komga", "Komga"),
             ("kavita", "Kavita"),
+            ("grimoire", "Grimoire"),
         ],
         validators=[DataRequired()],
     )
@@ -56,6 +57,7 @@ class WizardPresetForm(FlaskForm):
             ("romm", "Romm"),
             ("komga", "Komga"),
             ("kavita", "Kavita"),
+            ("grimoire", "Grimoire"),
         ],
         validators=[DataRequired()],
     )

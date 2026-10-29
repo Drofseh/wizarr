@@ -235,6 +235,7 @@ _SERVER_TYPE_ORDER = (
     "romm",
     "komga",
     "kavita",
+    "grimoire",
 )
 
 

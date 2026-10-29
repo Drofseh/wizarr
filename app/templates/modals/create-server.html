@@ -203,13 +203,13 @@
     function updateOptions() {
         const type = document.getElementById('server_type').value;
         // Show universal media server options for Plex, Jellyfin, Emby, Audiobookshelf, and Komga
-        const showMediaOptions = ['plex', 'jellyfin', 'emby', 'audiobookshelf', 'komga'].includes(type);
+        const showMediaOptions = ['plex', 'jellyfin', 'emby', 'audiobookshelf', 'komga', 'grimoire'].includes(type);
         document.getElementById('media-server-options').style.display = showMediaOptions ? 'block' : 'none';
 
-        // Hide "Allow Live TV" for Audiobookshelf and Komga since they don't support Live TV
+        // Hide "Allow Live TV" for Audiobookshelf, Komga, and Grimoire since they don't support Live TV
         const allowLiveTvOption = document.getElementById('allow-live-tv-option');
         if (allowLiveTvOption) {
-            allowLiveTvOption.style.display = ['audiobookshelf', 'komga'].includes(type) ? 'none' : 'block';
+            allowLiveTvOption.style.display = ['audiobookshelf', 'komga', 'grimoire'].includes(type) ? 'none' : 'block';
         }
 
         // Hide "Allow Mobile Uploads" for Audiobookshelf, Jellyfin, and Komga since they don't support mobile uploads

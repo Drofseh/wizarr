@@ -259,6 +259,7 @@ def join():
         "romm",
         "kavita",
         "komga",
+        "grimoire",
     ):
         from app.forms.join import JoinForm
         from app.services.invitation_flow.workflows import _get_server_colors

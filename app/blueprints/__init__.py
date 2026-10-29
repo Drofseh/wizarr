@@ -11,6 +11,7 @@ from .connections.routes import connections_bp
 from .emby.routes import emby_bp
 from .jellyfin.routes import jellyfin_bp
 from .kavita.routes import kavita_bp
+from .grimoire.routes import grimoire_bp
 from .komga.routes import komga_bp
 from .media_servers.routes import media_servers_bp
 from .notifications.routes import notify_bp
@@ -42,6 +43,7 @@ all_blueprints = (
     abs_bp,
     kavita_bp,
     komga_bp,
+    grimoire_bp,
     api_bp,
     status_bp,
     api_keys_bp,

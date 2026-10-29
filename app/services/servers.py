@@ -182,6 +182,38 @@ def check_komga(url: str, token: str) -> tuple[bool, str]:
         return handle_connection_error(e, _("Komga"))
 
 
+def check_grimoire(url: str, token: str) -> tuple[bool, str]:
+    """Quick connectivity check for a Grimoire instance.
+
+    We perform a lightweight GET request to ``/api/auth/status`` which is
+    available without authentication and returns whether the server is
+    initialized. When *token* is set we additionally fetch ``/api/stats``
+    using an ``X-API-Key`` header to verify the token works.
+    """
+    try:
+        headers = {"Accept": "application/json"}
+
+        # First check the auth status endpoint (no auth required)
+        resp = requests.get(
+            f"{url.rstrip('/')}/api/auth/status", headers=headers, timeout=10
+        )
+        if resp.status_code != 200:
+            raise ServerResponseError(resp.status_code, resp.url)
+
+        # If API key provided, verify it works against /api/stats
+        if token:
+            headers["X-API-Key"] = token
+            stats_resp = requests.get(
+                f"{url.rstrip('/')}/api/stats", headers=headers, timeout=10
+            )
+            if stats_resp.status_code != 200:
+                raise ServerResponseError(stats_resp.status_code, stats_resp.url)
+
+        return True, ""
+    except Exception as e:
+        return handle_connection_error(e, _("Grimoire"))
+
+
 def check_kavita(url: str, token: str) -> tuple[bool, str]:
     """Quick connectivity check for a Kavita instance.
 

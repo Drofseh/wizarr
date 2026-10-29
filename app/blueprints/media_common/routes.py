@@ -133,6 +133,7 @@ def register_media_blueprints(app):
         ("audiobookshelf", "/abs"),
         ("kavita", "/kavita"),
         ("komga", "/komga"),
+        ("grimoire", "/grimoire"),
         ("romm", "/romm"),
     ]
 

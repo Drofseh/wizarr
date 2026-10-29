@@ -11,7 +11,7 @@ import pytest
 
 from app.services.media import client_base
 
-MODULES = ["audiobookshelf", "drop", "jellyfin", "kavita", "komga", "romm", "service"]
+MODULES = ["audiobookshelf", "drop", "jellyfin", "grimoire", "kavita", "komga", "romm", "service"]
 
 
 @pytest.mark.parametrize("name", MODULES)

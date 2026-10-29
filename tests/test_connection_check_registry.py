@@ -24,6 +24,7 @@ EXPECTED = {
     "romm": "check_romm",
     "komga": "check_komga",
     "kavita": "check_kavita",
+    "grimoire": "check_grimoire",
     "navidrome": "check_navidrome",
     "drop": "check_drop",
 }

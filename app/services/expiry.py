@@ -312,6 +312,7 @@ def get_server_disable_capabilities() -> dict[str, bool]:
         "audiobookshelf": True,
         "kavita": True,  # Removes library access
         "komga": True,  # Removes library access
+        "grimoire": False,  # Does not support enable/disable
         "romm": True,
         "navidrome": False,  # Not supported
         "drop": False,  # Not supported

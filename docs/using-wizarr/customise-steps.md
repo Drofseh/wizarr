@@ -28,7 +28,7 @@ Default steps are server-type specific and will be shown to all users invited to
 
 1. **Click "Default Steps"** in the wizard settings
 2. **Click "Create Step"** to add a new step
-3. **Select the server type**: `plex`, `jellyfin`, `emby`, `audiobookshelf`, `romm`, or `komga`
+3. **Select the server type**: `plex`, `jellyfin`, `emby`, `audiobookshelf`, `romm`, `komga`, or `grimoire`
 4. **Write your content** using Markdown
 5. **Set conditional display** (optional) using the `requires` field
 
